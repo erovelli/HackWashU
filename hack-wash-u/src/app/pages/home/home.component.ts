@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   }
   
   demo() {
-    this._snackBar.open("Thank you for ordering a Moscow Mule at The Last Shop", "close");
+    this._snackBar.open("Order 572BEC successfully completed, code send to Liam Havens.", "close");
     }
   
 
@@ -37,13 +37,21 @@ export class HomeComponent implements OnInit {
   
   drinks: Drink[] = [
     {value: 'steak-0', viewValue: 'Moscow Mule'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+    {value: 'pizza-1', viewValue: 'Mojito'},
+    {value: 'pizza-1', viewValue: 'Whiskey'},
+    {value: 'pizza-1', viewValue: 'French 75'},
+    {value: 'pizza-1', viewValue: 'Manhattan'},
+    {value: 'pizza-1', viewValue: 'Spritz'},
+    {value: 'pizza-1', viewValue: 'Gimlet'},
+    {value: 'pizza-1', viewValue: 'Sazerac'},
+    {value: 'pizza-1', viewValue: 'Mimosa'},
   ];
   retailers: Retailer[] = [
-    {value: 'steak-0', viewValue: 'The Last Shop'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+    {value: 'steak-0', viewValue: 'Last Shop'},
+    {value: 'pizza-1', viewValue: 'Spoke'},
+    {value: 'pizza-1', viewValue: 'Stackers Pub'},
+    {value: 'pizza-1', viewValue: 'The Harp Irish Pub'},
+    {value: 'pizza-1', viewValue: 'Hangar Pub And Grill'},
   ];
 
 
