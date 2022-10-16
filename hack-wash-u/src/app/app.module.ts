@@ -14,6 +14,10 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import { HomeComponent } from './pages/home/home.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+// import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { HomeComponent } from './pages/home/home.component';
     ReactiveFormsModule,
     FormsModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+.bar{
+    display: flex;
+    background-color: #FFE100;
+    font-size: 2rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+align-items: center;
+justify-content: center;
+  }
+
+h1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  b
+}

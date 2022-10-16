@@ -1,1 +1,129 @@
-<p>list works!</p>
+<!-- <div id="center"> -->
+<!-- <mat-card>
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8 demo-table"
+    >
+      <ng-container
+        *ngFor="let column of columns"
+        [matColumnDef]="column.columnDef"
+      >
+        <th mat-header-cell *matHeaderCellDef>
+          {{ column.header }}
+        </th>
+        <td mat-cell *matCellDef="let row">
+          {{ column.cell(row) }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card>
+  <mat-card>
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8 demo-table"
+    >
+      <ng-container
+        *ngFor="let column of columns"
+        [matColumnDef]="column.columnDef"
+      >
+        <th mat-header-cell *matHeaderCellDef>
+          {{ column.header }}
+        </th>
+        <td mat-cell *matCellDef="let row">
+          {{ column.cell(row) }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card> -->
+
+<!-- <form>
+    <h4>mat-select</h4>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form> -->
+
+<!--  -->
+
+<mat-card>
+  <!-- <div id="bar"></div> -->
+  <mat-card-title>Order</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <!-- <div id="center"> -->
+      <mat-form-field appearance="fill">
+        <mat-label>Bar</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="retailer">
+          <mat-option
+            *ngFor="let retailer of retailers"
+            [value]="retailer.value"
+          >
+            {{ retailer.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Menu</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="drink">
+          <mat-option *ngFor="let drink of drinks" [value]="drink.value">
+            {{ drink.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- </div> -->
+
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Sender name"
+            formControlName="username"
+          />
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Recipient name"
+            formControlName="username"
+          />
+        </mat-form-field>
+      </p>
+
+      <p *ngIf="error" class="error">
+        {{ error }}
+      </p>
+
+      <div class="button">
+        <button type="submit" mat-button (click)="demo()">Submit</button>
+      </div>
+      <!-- <button
+        mat-stroked-button
+        (click)="openSnackBar(message.value, action.value)"
+      >
+        Show snack-bar
+      </button> -->
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<!--  -->
+<!-- </div> -->
