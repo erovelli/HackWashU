@@ -1,0 +1,40 @@
+# Download the helper library from https://www.twilio.com/docs/python/install
+import os
+from twilio.rest import Client
+import random
+
+
+
+# this will have to be put into database and sent here but just creating here for now
+random_number = random.randint(0,16777215)
+hex_number = str(hex(random_number))[2:]
+code=""
+for i in range(len(hex_number)): # makes letters uppercase
+  if hex_number[i] in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']:
+    code=code+hex_number[i].upper()
+  else:
+    code=code+hex_number[i]
+
+print('Random Hex  Code is :',code)
+
+# Find your Account SID and Auth Token in Account Info
+# and set the environment variables. See http://twil.io/secure
+account_sid = 'AC91d265d9144017602b42d43f76402327'
+auth_token = '6acb2ee08379312e66ab03364bb6ddd7'
+
+# to be swapped to pull from database, hardcoded for testing rn
+drink="Moscow Mule"
+bar="The Last Stop" 
+#code created above
+number='+19785056336' # can't be anyones number but mine til off trial account
+
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+  body='A '+drink+' is wating for you at the '+bar+'.\nSimply give the bartender the code '+code+' and show ID to redeem it',
+  from_='+13464833665',
+  to=number
+)
+
+print(message.sid)
