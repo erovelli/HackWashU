@@ -1,14 +1,13 @@
 // import { Component, OnInit } from '@angular/core';
-
 import { Input, Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class LoginComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   constructor() { }
 

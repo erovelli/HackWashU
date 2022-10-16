@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>Login</mat-card-title>
+  <mat-card-title>Sign Up</mat-card-title>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="submit()">
       <p>
@@ -24,12 +24,25 @@
         </mat-form-field>
       </p>
 
+      <!--  -->
+
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button id="radio-spacing" value="0"
+          >Customer</mat-radio-button
+        >
+        <mat-radio-button id="radio-spacing" value="0"
+          >Retailer</mat-radio-button
+        >
+      </mat-radio-group>
+
+      <!--  -->
+
       <p *ngIf="error" class="error">
         {{ error }}
       </p>
 
       <div class="button">
-        <button type="submit" mat-button>Login</button>
+        <button type="submit" mat-button>Sign Up</button>
       </div>
     </form>
   </mat-card-content>
